@@ -13,6 +13,9 @@
 		E531245E26138C6500268361 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E531245C26138C6500268361 /* Main.storyboard */; };
 		E531246026138C6900268361 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E531245F26138C6900268361 /* Assets.xcassets */; };
 		E531246326138C6900268361 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E531246126138C6900268361 /* LaunchScreen.storyboard */; };
+		E531247426138F2E00268361 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531247226138F2E00268361 /* MovieTableViewCell.swift */; };
+		E531247526138F2E00268361 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E531247326138F2E00268361 /* MovieTableViewCell.xib */; };
+		E531247A2613CD9B00268361 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53124792613CD9B00268361 /* CalendarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		E531245F26138C6900268361 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E531246226138C6900268361 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E531246426138C6900268361 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E531247226138F2E00268361 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		E531247326138F2E00268361 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		E53124792613CD9B00268361 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,42 @@
 		E531245526138C6500268361 /* TopMovies */ = {
 			isa = PBXGroup;
 			children = (
+				E53124772613C80000268361 /* Model */,
+				E531246B26138E9A00268361 /* View */,
 				E531245626138C6500268361 /* AppDelegate.swift */,
 				E531245826138C6500268361 /* SceneDelegate.swift */,
-				E531245A26138C6500268361 /* ViewController.swift */,
 				E531245C26138C6500268361 /* Main.storyboard */,
 				E531245F26138C6900268361 /* Assets.xcassets */,
 				E531246126138C6900268361 /* LaunchScreen.storyboard */,
 				E531246426138C6900268361 /* Info.plist */,
 			);
 			path = TopMovies;
+			sourceTree = "<group>";
+		};
+		E531246B26138E9A00268361 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E531246C26138EB000268361 /* MovieCell */,
+				E531245A26138C6500268361 /* ViewController.swift */,
+				E53124792613CD9B00268361 /* CalendarViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E531246C26138EB000268361 /* MovieCell */ = {
+			isa = PBXGroup;
+			children = (
+				E531247226138F2E00268361 /* MovieTableViewCell.swift */,
+				E531247326138F2E00268361 /* MovieTableViewCell.xib */,
+			);
+			path = MovieCell;
+			sourceTree = "<group>";
+		};
+		E53124772613C80000268361 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +159,7 @@
 			files = (
 				E531246326138C6900268361 /* LaunchScreen.storyboard in Resources */,
 				E531246026138C6900268361 /* Assets.xcassets in Resources */,
+				E531247526138F2E00268361 /* MovieTableViewCell.xib in Resources */,
 				E531245E26138C6500268361 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +171,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E531247A2613CD9B00268361 /* CalendarViewController.swift in Sources */,
 				E531245B26138C6500268361 /* ViewController.swift in Sources */,
 				E531245726138C6500268361 /* AppDelegate.swift in Sources */,
+				E531247426138F2E00268361 /* MovieTableViewCell.swift in Sources */,
 				E531245926138C6500268361 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
