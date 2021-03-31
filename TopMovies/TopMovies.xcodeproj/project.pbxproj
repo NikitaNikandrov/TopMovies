@@ -16,6 +16,7 @@
 		E531247426138F2E00268361 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531247226138F2E00268361 /* MovieTableViewCell.swift */; };
 		E531247526138F2E00268361 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E531247326138F2E00268361 /* MovieTableViewCell.xib */; };
 		E531247A2613CD9B00268361 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53124792613CD9B00268361 /* CalendarViewController.swift */; };
+		E531247D2614CF7000268361 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531247C2614CF7000268361 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E531247226138F2E00268361 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		E531247326138F2E00268361 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		E53124792613CD9B00268361 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		E531247C2614CF7000268361 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		E531245526138C6500268361 /* TopMovies */ = {
 			isa = PBXGroup;
 			children = (
+				E531247F2614D0FA00268361 /* Presenter */,
 				E53124772613C80000268361 /* Model */,
 				E531246B26138E9A00268361 /* View */,
 				E531245626138C6500268361 /* AppDelegate.swift */,
@@ -96,8 +99,16 @@
 		E53124772613C80000268361 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E531247C2614CF7000268361 /* Data.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E531247F2614D0FA00268361 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E531247A2613CD9B00268361 /* CalendarViewController.swift in Sources */,
+				E531247D2614CF7000268361 /* Data.swift in Sources */,
 				E531245B26138C6500268361 /* ViewController.swift in Sources */,
 				E531245726138C6500268361 /* AppDelegate.swift in Sources */,
 				E531247426138F2E00268361 /* MovieTableViewCell.swift in Sources */,

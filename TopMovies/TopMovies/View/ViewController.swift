@@ -11,7 +11,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var moviesTableView: UITableView!
     
-    var countOfMovieCells: Int?
+    private var dataOfMovies = DataOfMovies()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +25,14 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let count = countOfMovieCells else { return 0 }
+        guard let count = dataOfMovies.dataOfMovie?.count else { return 0 }
         return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath) as? MovieTableViewCell else { return UITableViewCell() }
+        guard let movie = dataOfMovies.dataOfMovie?[indexPath.row] else { return cell }
+        cell.loadCell(movie: movie)
         return cell
     }
 }

@@ -22,13 +22,19 @@ class MovieTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
+    func loadCell(movie: Movie) {
+        self.imageOfMovie.image = movie.imageOfMovie
+        self.numberOfRateLabel.text = movie.numberOfRate
+        self.nameOfMovieLabel.text = movie.nameOfMovie
+        self.dataOfMovieLabel.text = movie.dataOfMovie
+        self.dateOfMovieLabel.text = movie.dateOfMovie
+    }
 }
