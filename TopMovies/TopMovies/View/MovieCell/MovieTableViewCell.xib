@@ -88,12 +88,12 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="dataOfMovieLabel" destination="3mx-8A-Obk" id="pCa-cH-ZFm"/>
-                <outlet property="dateOfMovieLabel" destination="0kM-dM-gfD" id="sd8-Hv-ILA"/>
                 <outlet property="imageOfMovie" destination="269-LV-m56" id="y4b-pu-vem"/>
-                <outlet property="nameOfMovieLabel" destination="Ar3-Cr-brj" id="Vjs-Kw-yUl"/>
                 <outlet property="numberOfRateLabel" destination="uyM-mX-nP3" id="21K-U9-Kjz"/>
+                <outlet property="overviewOfMovieLabel" destination="3mx-8A-Obk" id="pCa-cH-ZFm"/>
+                <outlet property="releaseDateOfMovieLabel" destination="0kM-dM-gfD" id="sd8-Hv-ILA"/>
                 <outlet property="sheduleButton" destination="rz1-pR-NeQ" id="SwQ-jq-swa"/>
+                <outlet property="titleOfMovieLabel" destination="Ar3-Cr-brj" id="Vjs-Kw-yUl"/>
             </connections>
             <point key="canvasLocation" x="289.85507246376812" y="205.58035714285714"/>
         </tableViewCell>

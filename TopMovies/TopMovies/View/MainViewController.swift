@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     @IBOutlet weak var moviesTableView: UITableView!
     
-    private var dataOfMovies = DataOfMovies()
+    private var listOfMovies: [MovieData]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,16 +22,21 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension MainViewController: UITableViewDelegate, UITableViewDataSource, MainVCPresenterProtocol {
+    
+    func loadData(data: [MovieData]) {
+        self.listOfMovies = data
+        self.moviesTableView.reloadData()
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let count = dataOfMovies.dataOfMovie?.count else { return 0 }
+        guard let count = listOfMovies?.count else { return 0 }
         return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath) as? MovieTableViewCell else { return UITableViewCell() }
-        guard let movie = dataOfMovies.dataOfMovie?[indexPath.row] else { return cell }
+        guard let movie = listOfMovies?[indexPath.row] else { return cell }
         cell.loadCell(movie: movie)
         return cell
     }

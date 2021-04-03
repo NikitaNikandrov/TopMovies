@@ -8,14 +8,10 @@
 import Foundation
 import UIKit
 
-class Movie {
-    var imageOfMovie: UIImage?
-    var numberOfRate: String?
-    var nameOfMovie: String?
-    var dateOfMovie: String?
-    var dataOfMovie: String?
-}
-
-class DataOfMovies {
-    var dataOfMovie: [Movie]?
+class MovieData {
+    var posterURLOfMovie: String?
+    var numberOfRating: Double?
+    var titleOfMovie: String?
+    var releaseDateOfMovie: String?
+    var overviewOfMovie: String?
 }

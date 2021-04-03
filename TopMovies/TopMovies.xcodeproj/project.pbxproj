@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		E531245726138C6500268361 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531245626138C6500268361 /* AppDelegate.swift */; };
 		E531245926138C6500268361 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531245826138C6500268361 /* SceneDelegate.swift */; };
-		E531245B26138C6500268361 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531245A26138C6500268361 /* ViewController.swift */; };
+		E531245B26138C6500268361 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531245A26138C6500268361 /* MainViewController.swift */; };
 		E531245E26138C6500268361 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E531245C26138C6500268361 /* Main.storyboard */; };
 		E531246026138C6900268361 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E531245F26138C6900268361 /* Assets.xcassets */; };
 		E531246326138C6900268361 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E531246126138C6900268361 /* LaunchScreen.storyboard */; };
@@ -17,13 +17,16 @@
 		E531247526138F2E00268361 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E531247326138F2E00268361 /* MovieTableViewCell.xib */; };
 		E531247A2613CD9B00268361 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53124792613CD9B00268361 /* CalendarViewController.swift */; };
 		E531247D2614CF7000268361 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531247C2614CF7000268361 /* Data.swift */; };
+		E531248626151BA600268361 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531248526151BA600268361 /* NetworkService.swift */; };
+		E531248926151BD500268361 /* JsonTMDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531248826151BD500268361 /* JsonTMDBModel.swift */; };
+		E531248D261884D000268361 /* MainViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531248C261884D000268361 /* MainViewControllerPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E531245326138C6500268361 /* TopMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E531245626138C6500268361 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E531245826138C6500268361 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E531245A26138C6500268361 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E531245A26138C6500268361 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E531245D26138C6500268361 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E531245F26138C6900268361 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E531246226138C6900268361 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +35,9 @@
 		E531247326138F2E00268361 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		E53124792613CD9B00268361 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		E531247C2614CF7000268361 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		E531248526151BA600268361 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E531248826151BD500268361 /* JsonTMDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonTMDBModel.swift; sourceTree = "<group>"; };
+		E531248C261884D000268361 /* MainViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 		E531245526138C6500268361 /* TopMovies */ = {
 			isa = PBXGroup;
 			children = (
+				E53124842614EF9900268361 /* Services */,
 				E531247F2614D0FA00268361 /* Presenter */,
 				E53124772613C80000268361 /* Model */,
 				E531246B26138E9A00268361 /* View */,
@@ -81,7 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				E531246C26138EB000268361 /* MovieCell */,
-				E531245A26138C6500268361 /* ViewController.swift */,
+				E531245A26138C6500268361 /* MainViewController.swift */,
 				E53124792613CD9B00268361 /* CalendarViewController.swift */,
 			);
 			path = View;
@@ -100,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				E531247C2614CF7000268361 /* Data.swift */,
+				E531248826151BD500268361 /* JsonTMDBModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -107,8 +115,17 @@
 		E531247F2614D0FA00268361 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				E531248C261884D000268361 /* MainViewControllerPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E53124842614EF9900268361 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E531248526151BA600268361 /* NetworkService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,12 +199,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E531248926151BD500268361 /* JsonTMDBModel.swift in Sources */,
 				E531247A2613CD9B00268361 /* CalendarViewController.swift in Sources */,
+				E531248D261884D000268361 /* MainViewControllerPresenter.swift in Sources */,
 				E531247D2614CF7000268361 /* Data.swift in Sources */,
-				E531245B26138C6500268361 /* ViewController.swift in Sources */,
+				E531245B26138C6500268361 /* MainViewController.swift in Sources */,
 				E531245726138C6500268361 /* AppDelegate.swift in Sources */,
 				E531247426138F2E00268361 /* MovieTableViewCell.swift in Sources */,
 				E531245926138C6500268361 /* SceneDelegate.swift in Sources */,
+				E531248626151BA600268361 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
