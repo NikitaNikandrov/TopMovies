@@ -48,17 +48,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" datePickerMode="dateAndTime" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="y5i-yu-fzJ">
-                                <rect key="frame" x="20" y="264" width="374" height="379"/>
+                                <rect key="frame" x="20" y="94" width="374" height="380"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="380" id="VXg-Y1-Pel"/>
+                                </constraints>
                             </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oDP-FH-Tdl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="y5i-yu-fzJ" firstAttribute="leading" secondItem="oDP-FH-Tdl" secondAttribute="leading" constant="20" id="9h5-nJ-CaG"/>
-                            <constraint firstItem="y5i-yu-fzJ" firstAttribute="centerX" secondItem="oDP-FH-Tdl" secondAttribute="centerX" id="IzE-em-D5f"/>
-                            <constraint firstItem="oDP-FH-Tdl" firstAttribute="trailing" secondItem="y5i-yu-fzJ" secondAttribute="trailing" constant="20" id="LKn-WW-sUk"/>
-                            <constraint firstItem="y5i-yu-fzJ" firstAttribute="centerY" secondItem="oDP-FH-Tdl" secondAttribute="centerY" id="Wc0-b9-CBW"/>
-                            <constraint firstItem="y5i-yu-fzJ" firstAttribute="height" secondItem="xnm-qe-sNW" secondAttribute="height" multiplier="0.422991" id="bxo-7h-5tW"/>
+                            <constraint firstItem="y5i-yu-fzJ" firstAttribute="top" secondItem="oDP-FH-Tdl" secondAttribute="top" constant="50" id="ESy-mo-HVo"/>
+                            <constraint firstItem="oDP-FH-Tdl" firstAttribute="trailing" secondItem="y5i-yu-fzJ" secondAttribute="trailing" constant="20" id="Ofj-bJ-jPp"/>
+                            <constraint firstItem="y5i-yu-fzJ" firstAttribute="leading" secondItem="oDP-FH-Tdl" secondAttribute="leading" constant="20" id="h3K-y1-Wcm"/>
                         </constraints>
                     </view>
                 </viewController>

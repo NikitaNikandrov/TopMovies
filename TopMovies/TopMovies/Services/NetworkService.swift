@@ -14,12 +14,13 @@ class NetworkService {
         
         var resultResponce: JSONMovies.JsonMoviesResponse?
         
-        guard var urlComp = URLComponents(string: "https://api.themoviedb.org/3/discover/movie?api_key=7a5c24768228083f2aca064e6429ebde") else {
+        guard var urlComp = URLComponents(string: "https://api.themoviedb.org/3/discover/movie?") else {
             closure(nil)
             return
         }
         
-        let queryItems = [URLQueryItem(name: "sort_by", value: "popularity.desc"),
+        let queryItems = [URLQueryItem(name: "api_key", value: "7a5c24768228083f2aca064e6429ebde"),
+                          URLQueryItem(name: "sort_by", value: "popularity.desc"),
                           URLQueryItem(name: "primary_release_year", value: "2019")]
         urlComp.queryItems = queryItems
         
@@ -73,7 +74,16 @@ class NetworkService {
         } .resume()
     }
     
-    func loadImageOfMovie() {
+    func loadImageOfMovie(imageURL: String, closure: @escaping((UIImage?) -> Void)) {
         
+        var url = "https://image.tmdb.org/t/p/w500"
+        url += imageURL
+        guard let urlResponce = URL(string: url) else { return }
+        let task = URLSession.shared.dataTask(with: urlResponce) { [ weak self ] (data, _, _) in
+            guard let data = data,
+                  let image = UIImage(data: data) else { return }
+            closure(image)
+        }
+        task.resume()
     }
 }

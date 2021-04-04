@@ -20,6 +20,7 @@
 		E531248626151BA600268361 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531248526151BA600268361 /* NetworkService.swift */; };
 		E531248926151BD500268361 /* JsonTMDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531248826151BD500268361 /* JsonTMDBModel.swift */; };
 		E531248D261884D000268361 /* MainViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531248C261884D000268361 /* MainViewControllerPresenter.swift */; };
+		E531249426193C7700268361 /* MovieTableViewCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531249326193C7700268361 /* MovieTableViewCellPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		E531248526151BA600268361 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E531248826151BD500268361 /* JsonTMDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonTMDBModel.swift; sourceTree = "<group>"; };
 		E531248C261884D000268361 /* MainViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerPresenter.swift; sourceTree = "<group>"; };
+		E531249326193C7700268361 /* MovieTableViewCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCellPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				E531248C261884D000268361 /* MainViewControllerPresenter.swift */,
+				E531249326193C7700268361 /* MovieTableViewCellPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				E531245B26138C6500268361 /* MainViewController.swift in Sources */,
 				E531245726138C6500268361 /* AppDelegate.swift in Sources */,
 				E531247426138F2E00268361 /* MovieTableViewCell.swift in Sources */,
+				E531249426193C7700268361 /* MovieTableViewCellPresenter.swift in Sources */,
 				E531245926138C6500268361 /* SceneDelegate.swift in Sources */,
 				E531248626151BA600268361 /* NetworkService.swift in Sources */,
 			);

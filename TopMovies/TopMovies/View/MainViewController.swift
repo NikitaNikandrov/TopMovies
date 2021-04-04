@@ -8,10 +8,11 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
     @IBOutlet weak var moviesTableView: UITableView!
     
-    private var listOfMovies: [MovieData]?
+    var listOfMovies: [MovieData] = []
+    private var presenter: MainViewControllerPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,25 +20,38 @@ class MainViewController: UIViewController {
         moviesTableView.delegate = self
         moviesTableView.dataSource = self
         moviesTableView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "MovieTableViewCell")
+        
+        presenter = MainViewControllerPresenter()
+        presenter.delegate = self
+        presenter.loadListOfMovies()
     }
 }
 
-extension MainViewController: UITableViewDelegate, UITableViewDataSource, MainVCPresenterProtocol {
+extension MainViewController: UITableViewDelegate, UITableViewDataSource, MainVCPresenterProtocol, MainVCDelegateToCellProtocol {
+    func presentCalendarVC() {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        guard let calendarVC = storyboard.instantiateViewController(identifier: "CalendarViewController") as? CalendarViewController else { return }
+        show(calendarVC, sender: nil)
+    }
     
-    func loadData(data: [MovieData]) {
-        self.listOfMovies = data
+    func updateVC() {
         self.moviesTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let count = listOfMovies?.count else { return 0 }
+        let count = listOfMovies.count
         return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath) as? MovieTableViewCell else { return UITableViewCell() }
-        guard let movie = listOfMovies?[indexPath.row] else { return cell }
+        let movie = listOfMovies[indexPath.row]
         cell.loadCell(movie: movie)
+        cell.delegate = self
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

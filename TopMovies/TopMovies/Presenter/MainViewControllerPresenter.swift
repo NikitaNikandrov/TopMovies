@@ -7,15 +7,27 @@
 
 import Foundation
 
-protocol MainVCPresenterProtocol {
-    func loadData(data: [MovieData])
+protocol MainVCPresenterProtocol: AnyObject {
+    var listOfMovies: [MovieData] { get set }
+    func updateVC()
+}
+
+protocol MainVCDelegateToCellProtocol: AnyObject {
+    func presentCalendarVC()
 }
 
 class MainViewControllerPresenter {
     
-    let networkService = NetworkService()
-    var presenterVC: MainVCPresenterProtocol?
+    private let networkService = NetworkService()
+    weak var delegate: MainVCPresenterProtocol?
     
-    
-    
+    func loadListOfMovies(){
+        networkService.loadDataOfMovies() { (result) in
+            guard let result = result else { return }
+            self.delegate?.listOfMovies = result
+            DispatchQueue.main.sync {
+                self.delegate?.updateVC()
+            }
+        }
+    }
 }
