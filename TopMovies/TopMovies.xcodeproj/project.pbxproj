@@ -21,6 +21,8 @@
 		E531248926151BD500268361 /* JsonTMDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531248826151BD500268361 /* JsonTMDBModel.swift */; };
 		E531248D261884D000268361 /* MainViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531248C261884D000268361 /* MainViewControllerPresenter.swift */; };
 		E531249426193C7700268361 /* MovieTableViewCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531249326193C7700268361 /* MovieTableViewCellPresenter.swift */; };
+		E5312497261A4CC800268361 /* UserNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5312496261A4CC800268361 /* UserNotifications.swift */; };
+		E53124A6261B967B00268361 /* CalendarViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53124A5261B967B00268361 /* CalendarViewControllerPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		E531248826151BD500268361 /* JsonTMDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonTMDBModel.swift; sourceTree = "<group>"; };
 		E531248C261884D000268361 /* MainViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerPresenter.swift; sourceTree = "<group>"; };
 		E531249326193C7700268361 /* MovieTableViewCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCellPresenter.swift; sourceTree = "<group>"; };
+		E5312496261A4CC800268361 /* UserNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotifications.swift; sourceTree = "<group>"; };
+		E53124A5261B967B00268361 /* CalendarViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewControllerPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 			children = (
 				E531248C261884D000268361 /* MainViewControllerPresenter.swift */,
 				E531249326193C7700268361 /* MovieTableViewCellPresenter.swift */,
+				E53124A5261B967B00268361 /* CalendarViewControllerPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				E531248526151BA600268361 /* NetworkService.swift */,
+				E5312496261A4CC800268361 /* UserNotifications.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -202,8 +208,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E53124A6261B967B00268361 /* CalendarViewControllerPresenter.swift in Sources */,
 				E531248926151BD500268361 /* JsonTMDBModel.swift in Sources */,
 				E531247A2613CD9B00268361 /* CalendarViewController.swift in Sources */,
+				E5312497261A4CC800268361 /* UserNotifications.swift in Sources */,
 				E531248D261884D000268361 /* MainViewControllerPresenter.swift in Sources */,
 				E531247D2614CF7000268361 /* Data.swift in Sources */,
 				E531245B26138C6500268361 /* MainViewController.swift in Sources */,

@@ -52,16 +52,36 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="380" id="VXg-Y1-Pel"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="calendarDatePickerChanged:" destination="aWB-gu-znG" eventType="valueChanged" id="3lK-Ew-vRt"/>
+                                </connections>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3h-0r-yjJ">
+                                <rect key="frame" x="87" y="484" width="240" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="12C-qO-t9o"/>
+                                    <constraint firstAttribute="height" constant="40" id="VKy-bR-Ge8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="setPushButtonIsPressed:" destination="aWB-gu-znG" eventType="touchUpInside" id="bj8-Xy-Bk5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oDP-FH-Tdl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="R3h-0r-yjJ" firstAttribute="centerX" secondItem="oDP-FH-Tdl" secondAttribute="centerX" id="C2y-B9-8Rp"/>
                             <constraint firstItem="y5i-yu-fzJ" firstAttribute="top" secondItem="oDP-FH-Tdl" secondAttribute="top" constant="50" id="ESy-mo-HVo"/>
                             <constraint firstItem="oDP-FH-Tdl" firstAttribute="trailing" secondItem="y5i-yu-fzJ" secondAttribute="trailing" constant="20" id="Ofj-bJ-jPp"/>
                             <constraint firstItem="y5i-yu-fzJ" firstAttribute="leading" secondItem="oDP-FH-Tdl" secondAttribute="leading" constant="20" id="h3K-y1-Wcm"/>
+                            <constraint firstItem="R3h-0r-yjJ" firstAttribute="top" secondItem="y5i-yu-fzJ" secondAttribute="bottom" constant="10" id="zwU-PU-Q5K"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="calendarDatePicker" destination="y5i-yu-fzJ" id="ZFb-DU-pQW"/>
+                        <outlet property="setPushButton" destination="R3h-0r-yjJ" id="JFd-Iv-bny"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aw2-MX-wYv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -22,7 +22,7 @@ class MovieTableViewCell: UITableViewCell {
     
     @IBOutlet weak var sheduleButton: UIButton!
     @IBAction func sheduleButtonIsPressed(_ sender: Any) {
-        self.delegate?.presentCalendarVC()
+        self.delegate?.presentCalendarVC(movieName: self.titleOfMovieLabel.text!)
     }
  
     override func prepareForReuse() {
@@ -30,6 +30,7 @@ class MovieTableViewCell: UITableViewCell {
     }
     
     func loadCell(movie: MovieData) {
+        
         presenter = MovieTableViewCellPresenter()
         presenter.delegate = self
         presenter.loadPoster(posterURL: movie.posterURLOfMovie!)

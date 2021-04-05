@@ -28,9 +28,11 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource, MainVCPresenterProtocol, MainVCDelegateToCellProtocol {
-    func presentCalendarVC() {
+    
+    func presentCalendarVC(movieName: String) {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         guard let calendarVC = storyboard.instantiateViewController(identifier: "CalendarViewController") as? CalendarViewController else { return }
+        calendarVC.movieNameForNotification = movieName
         show(calendarVC, sender: nil)
     }
     

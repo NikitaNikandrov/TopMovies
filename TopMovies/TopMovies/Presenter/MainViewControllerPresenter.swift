@@ -13,7 +13,7 @@ protocol MainVCPresenterProtocol: AnyObject {
 }
 
 protocol MainVCDelegateToCellProtocol: AnyObject {
-    func presentCalendarVC()
+    func presentCalendarVC(movieName: String)
 }
 
 class MainViewControllerPresenter {
