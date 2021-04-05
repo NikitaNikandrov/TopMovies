@@ -2,7 +2,7 @@
 
 TopMovies is the test application for interview.
 It uses TMDb API to get some data of top movies 2019.
-It can send you reminder notifications to see the movie at date you shoosed.
+It can send you reminder notifications to see the movie at date you have shoosen.
 
 ![mainVC](https://user-images.githubusercontent.com/71771889/113633998-a694a980-9676-11eb-94ce-0010d5378182.png)
 ![calendarVC](https://user-images.githubusercontent.com/71771889/113634027-b613f280-9676-11eb-9d6a-8ede61deb0a7.png)
