@@ -21,6 +21,6 @@ class CalendarViewControllerPresenter {
     func setNotification(){
         guard let body = delegate?.movieNameForNotification else { return }
         guard let date = delegate?.dateOfNotification else { return }
-        self.userNotification.scheduleNotification(notificationBody: body, date: date)
+        userNotification.scheduleNotification(notificationBody: body, date: date)
     }
 }

@@ -21,6 +21,7 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var overviewOfMovieLabel: UILabel!
     
     @IBOutlet weak var sheduleButton: UIButton!
+    
     @IBAction func sheduleButtonIsPressed(_ sender: Any) {
         self.delegate?.presentCalendarVC(movieName: self.titleOfMovieLabel.text!)
     }

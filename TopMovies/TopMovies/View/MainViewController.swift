@@ -9,10 +9,10 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    @IBOutlet weak var moviesTableView: UITableView!
-    
     var listOfMovies: [MovieData] = []
     private var presenter: MainViewControllerPresenter!
+    
+    @IBOutlet weak var moviesTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

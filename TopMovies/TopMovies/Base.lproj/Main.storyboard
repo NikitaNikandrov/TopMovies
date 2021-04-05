@@ -87,10 +87,10 @@
             </objects>
             <point key="canvasLocation" x="1837.68115942029" y="93.75"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--TopMovies-->
         <scene sceneID="Cdi-hh-5sO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IFa-mI-K4Y" sceneMemberID="viewController">
+                <navigationController title="TopMovies" automaticallyAdjustsScrollViewInsets="NO" id="IFa-mI-K4Y" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PCW-5s-uFQ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
