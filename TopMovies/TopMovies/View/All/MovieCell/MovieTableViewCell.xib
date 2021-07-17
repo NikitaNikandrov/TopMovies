@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,30 +23,37 @@
                             <constraint firstAttribute="width" constant="170" id="MqH-IP-AW1"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="num" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyM-mX-nP3">
-                        <rect key="frame" x="183" y="29" width="35" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyM-mX-nP3">
+                        <rect key="frame" x="190" y="20" width="40" height="40"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="35" id="e99-z0-vEL"/>
+                            <constraint firstAttribute="height" constant="40" id="2Q4-wn-pEd"/>
+                            <constraint firstAttribute="width" constant="40" id="e99-z0-vEL"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ar3-Cr-brj">
-                        <rect key="frame" x="240" y="29" width="155" height="20.5"/>
-                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                        <rect key="frame" x="245" y="30" width="145" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kM-dM-gfD">
-                        <rect key="frame" x="183" y="76.5" width="212" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="183" y="110" width="212" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="LTk-fh-3sd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mx-8A-Obk">
-                        <rect key="frame" x="183" y="105.5" width="212" height="121.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mx-8A-Obk">
+                        <rect key="frame" x="183" y="148" width="212" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="Zoy-uW-kHe"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -58,38 +65,38 @@
                         </constraints>
                         <state key="normal" title="Shedule"/>
                         <connections>
-                            <action selector="sheduleButtonIsPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="IRU-SG-nD0"/>
+                            <action selector="viewMoreButtonIsPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="IRU-SG-nD0"/>
                         </connections>
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="rz1-pR-NeQ" firstAttribute="top" secondItem="3mx-8A-Obk" secondAttribute="bottom" constant="17" id="55j-tA-mHa"/>
-                    <constraint firstItem="0kM-dM-gfD" firstAttribute="top" secondItem="Ar3-Cr-brj" secondAttribute="bottom" constant="27" id="5Ne-AW-H6g"/>
-                    <constraint firstItem="Ar3-Cr-brj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="29" id="9Pa-5Y-NoY"/>
+                    <constraint firstItem="uyM-mX-nP3" firstAttribute="leading" secondItem="269-LV-m56" secondAttribute="trailing" constant="15" id="8MB-4L-Qmc"/>
+                    <constraint firstItem="Ar3-Cr-brj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="9Pa-5Y-NoY"/>
                     <constraint firstItem="3mx-8A-Obk" firstAttribute="leading" secondItem="269-LV-m56" secondAttribute="trailing" constant="8" symbolic="YES" id="B1B-lz-att"/>
                     <constraint firstItem="0kM-dM-gfD" firstAttribute="leading" secondItem="269-LV-m56" secondAttribute="trailing" constant="8" symbolic="YES" id="Cl7-WC-37F"/>
-                    <constraint firstItem="uyM-mX-nP3" firstAttribute="leading" secondItem="269-LV-m56" secondAttribute="trailing" constant="8" symbolic="YES" id="EfM-qK-ane"/>
+                    <constraint firstAttribute="bottom" secondItem="269-LV-m56" secondAttribute="bottom" constant="5" id="Hjh-0C-gK9"/>
                     <constraint firstAttribute="trailing" secondItem="3mx-8A-Obk" secondAttribute="trailing" constant="5" id="HpE-5K-1Rf"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="rz1-pR-NeQ" secondAttribute="bottom" constant="15" id="I8t-tl-hwT"/>
                     <constraint firstAttribute="trailing" secondItem="0kM-dM-gfD" secondAttribute="trailing" constant="5" id="QsD-W5-bJ0"/>
                     <constraint firstItem="269-LV-m56" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="S4g-7C-LAM"/>
+                    <constraint firstItem="rz1-pR-NeQ" firstAttribute="top" secondItem="3mx-8A-Obk" secondAttribute="bottom" constant="16" id="VVq-et-Jze"/>
                     <constraint firstItem="269-LV-m56" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="ecn-I6-SJ1"/>
-                    <constraint firstItem="uyM-mX-nP3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="29" id="f5j-9h-A09"/>
-                    <constraint firstItem="Ar3-Cr-brj" firstAttribute="leading" secondItem="uyM-mX-nP3" secondAttribute="trailing" constant="22" id="jQW-UC-7yn"/>
-                    <constraint firstAttribute="bottom" secondItem="3mx-8A-Obk" secondAttribute="bottom" constant="73" id="onx-IG-cQ9"/>
+                    <constraint firstItem="uyM-mX-nP3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="f5j-9h-A09"/>
+                    <constraint firstItem="Ar3-Cr-brj" firstAttribute="leading" secondItem="uyM-mX-nP3" secondAttribute="trailing" constant="15" id="jQW-UC-7yn"/>
                     <constraint firstItem="rz1-pR-NeQ" firstAttribute="leading" secondItem="3mx-8A-Obk" secondAttribute="trailing" constant="-181" id="pL0-If-LFe"/>
-                    <constraint firstItem="3mx-8A-Obk" firstAttribute="top" secondItem="0kM-dM-gfD" secondAttribute="bottom" constant="8" symbolic="YES" id="qD1-Iv-4eo"/>
                     <constraint firstAttribute="trailing" secondItem="rz1-pR-NeQ" secondAttribute="trailing" constant="36" id="sG3-51-bij"/>
-                    <constraint firstAttribute="trailing" secondItem="Ar3-Cr-brj" secondAttribute="trailing" constant="5" id="y0O-Xw-L3l"/>
+                    <constraint firstItem="3mx-8A-Obk" firstAttribute="top" secondItem="0kM-dM-gfD" secondAttribute="bottom" constant="20" id="wQc-Oh-ipm"/>
+                    <constraint firstAttribute="trailing" secondItem="Ar3-Cr-brj" secondAttribute="trailing" constant="10" id="y0O-Xw-L3l"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="numberOfRateLabel" destination="uyM-mX-nP3" id="21K-U9-Kjz"/>
-                <outlet property="overviewOfMovieLabel" destination="3mx-8A-Obk" id="pCa-cH-ZFm"/>
+                <outlet property="dataOfMovieLabel" destination="3mx-8A-Obk" id="pCa-cH-ZFm"/>
+                <outlet property="dateOfMovieLabel" destination="0kM-dM-gfD" id="sd8-Hv-ILA"/>
                 <outlet property="posterOfMovie" destination="269-LV-m56" id="Lp1-Iu-5UD"/>
-                <outlet property="releaseDateOfMovieLabel" destination="0kM-dM-gfD" id="sd8-Hv-ILA"/>
-                <outlet property="sheduleButton" destination="rz1-pR-NeQ" id="SwQ-jq-swa"/>
+                <outlet property="ratingLabel" destination="uyM-mX-nP3" id="21K-U9-Kjz"/>
                 <outlet property="titleOfMovieLabel" destination="Ar3-Cr-brj" id="Vjs-Kw-yUl"/>
+                <outlet property="viewMoreButton" destination="rz1-pR-NeQ" id="SwQ-jq-swa"/>
             </connections>
             <point key="canvasLocation" x="289.85507246376812" y="205.58035714285714"/>
         </tableViewCell>

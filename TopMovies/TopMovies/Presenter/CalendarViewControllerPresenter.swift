@@ -7,20 +7,14 @@
 
 import Foundation
 
-protocol CalendarViewControllerProtocol: AnyObject {
-    var movieNameForNotification: String? { get set }
-    var dateOfNotification: DateComponents? { get set }
-    func fetchChangesFromDatepicker()
-}
-
 class CalendarViewControllerPresenter {
     
     private let userNotification = UserNotifications()
-    weak var delegate: CalendarViewControllerProtocol?
     
     func setNotification(){
-        guard let body = delegate?.movieNameForNotification else { return }
-        guard let date = delegate?.dateOfNotification else { return }
+        guard let body = CalendarViewControllerData.shared.movieNameForNotification else { return }
+        let date = CalendarViewControllerData.shared.dateOfNotification
         userNotification.scheduleNotification(notificationBody: body, date: date)
+        print("notification setted")
     }
 }

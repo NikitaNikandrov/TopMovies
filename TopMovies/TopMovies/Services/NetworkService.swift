@@ -19,9 +19,16 @@ class NetworkService {
             return
         }
         
+        var year = SettingsOfListData.shared.choosedYear
+        if year == nil {
+            let date = Date()
+            let calendar = Calendar.current
+            year = "\(calendar.component(.year, from: date))"
+        }
+        
         let queryItems = [URLQueryItem(name: "api_key", value: "7a5c24768228083f2aca064e6429ebde"),
                           URLQueryItem(name: "sort_by", value: "popularity.desc"),
-                          URLQueryItem(name: "primary_release_year", value: "2019")]
+                          URLQueryItem(name: "primary_release_year", value: year)]
         urlComp.queryItems = queryItems
         
         guard let urlFinal = urlComp.url else {

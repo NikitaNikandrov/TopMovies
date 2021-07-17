@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E52B4A7F2676429D007B0328 /* SettingsOfListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B4A7E2676429D007B0328 /* SettingsOfListViewController.swift */; };
+		E52B4A82267666A1007B0328 /* SettingsOfListViewControllerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B4A81267666A1007B0328 /* SettingsOfListViewControllerData.swift */; };
+		E52B4A8426769C73007B0328 /* MainViewControllerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B4A8326769C73007B0328 /* MainViewControllerData.swift */; };
+		E52B4A8626810AF1007B0328 /* FavouritsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B4A8526810AF1007B0328 /* FavouritsViewController.swift */; };
+		E52B4A8C2688FD55007B0328 /* DataOfMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B4A8B2688FD55007B0328 /* DataOfMovieViewController.swift */; };
+		E52B4A9026909600007B0328 /* DataViewControllerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B4A8F26909600007B0328 /* DataViewControllerData.swift */; };
+		E52B4A9226909C98007B0328 /* CalendarViewControllerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B4A9126909C98007B0328 /* CalendarViewControllerData.swift */; };
+		E52B4A9626926A2C007B0328 /* FavouritViewControllerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B4A9526926A2C007B0328 /* FavouritViewControllerData.swift */; };
+		E52B4A9A26998C6E007B0328 /* DataOfMovieViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B4A9926998C6E007B0328 /* DataOfMovieViewControllerPresenter.swift */; };
+		E52B4A9C269F4D09007B0328 /* FavouritsViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B4A9B269F4D09007B0328 /* FavouritsViewControllerPresenter.swift */; };
 		E531245726138C6500268361 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531245626138C6500268361 /* AppDelegate.swift */; };
 		E531245926138C6500268361 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531245826138C6500268361 /* SceneDelegate.swift */; };
 		E531245B26138C6500268361 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531245A26138C6500268361 /* MainViewController.swift */; };
@@ -20,12 +30,22 @@
 		E531248626151BA600268361 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531248526151BA600268361 /* NetworkService.swift */; };
 		E531248926151BD500268361 /* JsonTMDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531248826151BD500268361 /* JsonTMDBModel.swift */; };
 		E531248D261884D000268361 /* MainViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531248C261884D000268361 /* MainViewControllerPresenter.swift */; };
-		E531249426193C7700268361 /* MovieTableViewCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531249326193C7700268361 /* MovieTableViewCellPresenter.swift */; };
 		E5312497261A4CC800268361 /* UserNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5312496261A4CC800268361 /* UserNotifications.swift */; };
 		E53124A6261B967B00268361 /* CalendarViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53124A5261B967B00268361 /* CalendarViewControllerPresenter.swift */; };
+		E5A5ED9726641BDD002FCFC3 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A5ED9626641BDD002FCFC3 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E52B4A7E2676429D007B0328 /* SettingsOfListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOfListViewController.swift; sourceTree = "<group>"; };
+		E52B4A81267666A1007B0328 /* SettingsOfListViewControllerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOfListViewControllerData.swift; sourceTree = "<group>"; };
+		E52B4A8326769C73007B0328 /* MainViewControllerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerData.swift; sourceTree = "<group>"; };
+		E52B4A8526810AF1007B0328 /* FavouritsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritsViewController.swift; sourceTree = "<group>"; };
+		E52B4A8B2688FD55007B0328 /* DataOfMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataOfMovieViewController.swift; sourceTree = "<group>"; };
+		E52B4A8F26909600007B0328 /* DataViewControllerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewControllerData.swift; sourceTree = "<group>"; };
+		E52B4A9126909C98007B0328 /* CalendarViewControllerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewControllerData.swift; sourceTree = "<group>"; };
+		E52B4A9526926A2C007B0328 /* FavouritViewControllerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritViewControllerData.swift; sourceTree = "<group>"; };
+		E52B4A9926998C6E007B0328 /* DataOfMovieViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataOfMovieViewControllerPresenter.swift; sourceTree = "<group>"; };
+		E52B4A9B269F4D09007B0328 /* FavouritsViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritsViewControllerPresenter.swift; sourceTree = "<group>"; };
 		E531245326138C6500268361 /* TopMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E531245626138C6500268361 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E531245826138C6500268361 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,9 +61,9 @@
 		E531248526151BA600268361 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E531248826151BD500268361 /* JsonTMDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonTMDBModel.swift; sourceTree = "<group>"; };
 		E531248C261884D000268361 /* MainViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerPresenter.swift; sourceTree = "<group>"; };
-		E531249326193C7700268361 /* MovieTableViewCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCellPresenter.swift; sourceTree = "<group>"; };
 		E5312496261A4CC800268361 /* UserNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotifications.swift; sourceTree = "<group>"; };
 		E53124A5261B967B00268361 /* CalendarViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewControllerPresenter.swift; sourceTree = "<group>"; };
+		E5A5ED9626641BDD002FCFC3 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +77,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E52B4A8026766672007B0328 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E52B4A93269269D2007B0328 /* All */,
+				E52B4A94269269FB007B0328 /* Favourit */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E52B4A8926810F16007B0328 /* All */ = {
+			isa = PBXGroup;
+			children = (
+				E531245A26138C6500268361 /* MainViewController.swift */,
+				E52B4A8B2688FD55007B0328 /* DataOfMovieViewController.swift */,
+				E53124792613CD9B00268361 /* CalendarViewController.swift */,
+				E52B4A7E2676429D007B0328 /* SettingsOfListViewController.swift */,
+				E5A5ED9626641BDD002FCFC3 /* InfoViewController.swift */,
+				E531246C26138EB000268361 /* MovieCell */,
+			);
+			path = All;
+			sourceTree = "<group>";
+		};
+		E52B4A8A26810F6A007B0328 /* Favourit */ = {
+			isa = PBXGroup;
+			children = (
+				E52B4A8526810AF1007B0328 /* FavouritsViewController.swift */,
+			);
+			path = Favourit;
+			sourceTree = "<group>";
+		};
+		E52B4A93269269D2007B0328 /* All */ = {
+			isa = PBXGroup;
+			children = (
+				E52B4A8326769C73007B0328 /* MainViewControllerData.swift */,
+				E52B4A8F26909600007B0328 /* DataViewControllerData.swift */,
+				E52B4A9126909C98007B0328 /* CalendarViewControllerData.swift */,
+				E52B4A81267666A1007B0328 /* SettingsOfListViewControllerData.swift */,
+			);
+			path = All;
+			sourceTree = "<group>";
+		};
+		E52B4A94269269FB007B0328 /* Favourit */ = {
+			isa = PBXGroup;
+			children = (
+				E52B4A9526926A2C007B0328 /* FavouritViewControllerData.swift */,
+			);
+			path = Favourit;
+			sourceTree = "<group>";
+		};
 		E531244A26138C6500268361 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +145,7 @@
 		E531245526138C6500268361 /* TopMovies */ = {
 			isa = PBXGroup;
 			children = (
+				E52B4A8026766672007B0328 /* Data */,
 				E53124842614EF9900268361 /* Services */,
 				E531247F2614D0FA00268361 /* Presenter */,
 				E53124772613C80000268361 /* Model */,
@@ -93,9 +163,8 @@
 		E531246B26138E9A00268361 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E531246C26138EB000268361 /* MovieCell */,
-				E531245A26138C6500268361 /* MainViewController.swift */,
-				E53124792613CD9B00268361 /* CalendarViewController.swift */,
+				E52B4A8926810F16007B0328 /* All */,
+				E52B4A8A26810F6A007B0328 /* Favourit */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -122,8 +191,9 @@
 			isa = PBXGroup;
 			children = (
 				E531248C261884D000268361 /* MainViewControllerPresenter.swift */,
-				E531249326193C7700268361 /* MovieTableViewCellPresenter.swift */,
 				E53124A5261B967B00268361 /* CalendarViewControllerPresenter.swift */,
+				E52B4A9926998C6E007B0328 /* DataOfMovieViewControllerPresenter.swift */,
+				E52B4A9B269F4D09007B0328 /* FavouritsViewControllerPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -208,16 +278,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E52B4A7F2676429D007B0328 /* SettingsOfListViewController.swift in Sources */,
 				E53124A6261B967B00268361 /* CalendarViewControllerPresenter.swift in Sources */,
 				E531248926151BD500268361 /* JsonTMDBModel.swift in Sources */,
+				E52B4A82267666A1007B0328 /* SettingsOfListViewControllerData.swift in Sources */,
 				E531247A2613CD9B00268361 /* CalendarViewController.swift in Sources */,
+				E52B4A9026909600007B0328 /* DataViewControllerData.swift in Sources */,
+				E52B4A8426769C73007B0328 /* MainViewControllerData.swift in Sources */,
+				E52B4A9226909C98007B0328 /* CalendarViewControllerData.swift in Sources */,
 				E5312497261A4CC800268361 /* UserNotifications.swift in Sources */,
 				E531248D261884D000268361 /* MainViewControllerPresenter.swift in Sources */,
+				E52B4A9A26998C6E007B0328 /* DataOfMovieViewControllerPresenter.swift in Sources */,
 				E531247D2614CF7000268361 /* Data.swift in Sources */,
 				E531245B26138C6500268361 /* MainViewController.swift in Sources */,
+				E52B4A9C269F4D09007B0328 /* FavouritsViewControllerPresenter.swift in Sources */,
+				E52B4A8626810AF1007B0328 /* FavouritsViewController.swift in Sources */,
 				E531245726138C6500268361 /* AppDelegate.swift in Sources */,
 				E531247426138F2E00268361 /* MovieTableViewCell.swift in Sources */,
-				E531249426193C7700268361 /* MovieTableViewCellPresenter.swift in Sources */,
+				E52B4A8C2688FD55007B0328 /* DataOfMovieViewController.swift in Sources */,
+				E5A5ED9726641BDD002FCFC3 /* InfoViewController.swift in Sources */,
+				E52B4A9626926A2C007B0328 /* FavouritViewControllerData.swift in Sources */,
 				E531245926138C6500268361 /* SceneDelegate.swift in Sources */,
 				E531248626151BA600268361 /* NetworkService.swift in Sources */,
 			);
@@ -366,15 +446,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L8ZXWNP3PM;
 				INFOPLIST_FILE = TopMovies/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Nikita.TopMovies;
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TopMoviesV2.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -385,15 +469,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L8ZXWNP3PM;
 				INFOPLIST_FILE = TopMovies/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Nikita.TopMovies;
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TopMoviesV2.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

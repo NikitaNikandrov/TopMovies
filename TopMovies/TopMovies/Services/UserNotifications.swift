@@ -26,10 +26,9 @@ class UserNotifications: NSObject {
     }
     
     func scheduleNotification(notificationBody: String, date: DateComponents) {
-        
         let center = UNUserNotificationCenter.current()
-
         let content = UNMutableNotificationContent()
+       
         content.title = "Don't forget to see the movie:"
         content.body = notificationBody
         content.sound = UNNotificationSound.default

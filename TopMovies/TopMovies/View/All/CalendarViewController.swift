@@ -9,8 +9,6 @@ import UIKit
 
 class CalendarViewController: UIViewController {
 
-    var movieNameForNotification: String?
-    var dateOfNotification: DateComponents?
     private var presenter: CalendarViewControllerPresenter!
     
     @IBOutlet weak var calendarDatePicker: UIDatePicker!
@@ -27,25 +25,28 @@ class CalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dateOfNotification = DateComponents()
+        self.tabBarController?.tabBar.isHidden = true
         
-        setPushButton.setTitle("Remind me", for: .normal)
+        setupSetPushButton()
         
         let localeID = Locale.preferredLanguages.first
         self.calendarDatePicker.locale = Locale(identifier: localeID!)
         
         presenter = CalendarViewControllerPresenter()
-        presenter.delegate = self
     }
-}
-
-extension CalendarViewController: CalendarViewControllerProtocol {
+    
+    func setupSetPushButton() {
+        self.setPushButton.setTitle("Remind me", for: .normal)
+        self.setPushButton.setTitleColor(.white, for: .normal)
+        self.setPushButton.backgroundColor = .systemGray2
+        self.setPushButton.layer.cornerRadius = 5
+    }
     
     func fetchChangesFromDatepicker() {
         let components = self.calendarDatePicker.calendar.dateComponents([.month,.day,.hour,.minute], from: calendarDatePicker.date)
-        dateOfNotification?.month = components.month
-        dateOfNotification?.day = components.day
-        dateOfNotification?.hour = components.hour
-        dateOfNotification?.minute = components.minute
+        CalendarViewControllerData.shared.dateOfNotification.month = components.month
+        CalendarViewControllerData.shared.dateOfNotification.day = components.day
+        CalendarViewControllerData.shared.dateOfNotification.hour = components.hour
+        CalendarViewControllerData.shared.dateOfNotification.minute = components.minute
     }
 }
