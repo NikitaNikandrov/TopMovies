@@ -4,7 +4,7 @@
 - 🌐 It uses TMDb API to get some data of top movies by year.
 - 🔊 It can send you reminder notifications to see the movie at date you had shoosen.
 
-- 🚀 Now a have added capability of searching by year, sorting movies and adding to favourits. Also I made some design update.
+- 🚀 Now a have added capability of searching by year, sorting movies and adding to favourits. Also I have made some design update.
 
 
 ![main](https://user-images.githubusercontent.com/71771889/126029958-7a2bb7b4-c003-4f5f-8711-10d3d67472b2.png)
