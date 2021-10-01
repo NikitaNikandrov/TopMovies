@@ -12,8 +12,7 @@ class FavouritsViewController: UIViewController {
     @IBOutlet weak var favourutsMovieTableView: UITableView!
     
     let cellReuseID = "Cell"
-    
-    private var presenter: FavouritsViewControllerPresenter!
+    private let defaultsService = UserDefaultsService()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -22,9 +21,8 @@ class FavouritsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        presenter = FavouritsViewControllerPresenter()
-        presenter.loadDataFromDefaults()
+        
+        defaultsService.loadDataFromDefaults()
         
         self.title = "Favourit movies"
         self.favourutsMovieTableView.delegate = self
@@ -56,6 +54,8 @@ extension FavouritsViewController: UITableViewDelegate, UITableViewDataSource {
             FavouritViewControllerData.shared.favouritMovies?.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
+        defaultsService.clearDefaults()
+        defaultsService.saveDataToDefaults()
         self.favourutsMovieTableView.reloadData()
     }
 }

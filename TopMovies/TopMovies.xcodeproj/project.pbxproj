@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E50D080F2707BF3B0066C700 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50D080E2707BF3B0066C700 /* UserDefaultsService.swift */; };
 		E52B4A7F2676429D007B0328 /* SettingsOfListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B4A7E2676429D007B0328 /* SettingsOfListViewController.swift */; };
 		E52B4A82267666A1007B0328 /* SettingsOfListViewControllerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B4A81267666A1007B0328 /* SettingsOfListViewControllerData.swift */; };
 		E52B4A8426769C73007B0328 /* MainViewControllerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B4A8326769C73007B0328 /* MainViewControllerData.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E50D080E2707BF3B0066C700 /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		E52B4A7E2676429D007B0328 /* SettingsOfListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOfListViewController.swift; sourceTree = "<group>"; };
 		E52B4A81267666A1007B0328 /* SettingsOfListViewControllerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOfListViewControllerData.swift; sourceTree = "<group>"; };
 		E52B4A8326769C73007B0328 /* MainViewControllerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerData.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			children = (
 				E531248526151BA600268361 /* NetworkService.swift */,
 				E5312496261A4CC800268361 /* UserNotifications.swift */,
+				E50D080E2707BF3B0066C700 /* UserDefaultsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				E53124A6261B967B00268361 /* CalendarViewControllerPresenter.swift in Sources */,
 				E531248926151BD500268361 /* JsonTMDBModel.swift in Sources */,
 				E52B4A82267666A1007B0328 /* SettingsOfListViewControllerData.swift in Sources */,
+				E50D080F2707BF3B0066C700 /* UserDefaultsService.swift in Sources */,
 				E531247A2613CD9B00268361 /* CalendarViewController.swift in Sources */,
 				E52B4A9026909600007B0328 /* DataViewControllerData.swift in Sources */,
 				E52B4A8426769C73007B0328 /* MainViewControllerData.swift in Sources */,
