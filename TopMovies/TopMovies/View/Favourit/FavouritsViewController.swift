@@ -13,6 +13,8 @@ class FavouritsViewController: UIViewController {
     
     let cellReuseID = "Cell"
     
+    private var presenter: FavouritsViewControllerPresenter!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.favourutsMovieTableView.reloadData()
@@ -21,11 +23,13 @@ class FavouritsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        presenter = FavouritsViewControllerPresenter()
+        presenter.loadDataFromDefaults()
+        
         self.title = "Favourit movies"
         self.favourutsMovieTableView.delegate = self
         self.favourutsMovieTableView.dataSource = self
         self.favourutsMovieTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseID)
-        
     }
     
 }
