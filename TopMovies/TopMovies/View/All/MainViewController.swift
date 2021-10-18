@@ -77,12 +77,10 @@ class MainViewController: UIViewController {
         super.viewWillAppear(true)
         
         // checkinig an internet access
+        // create func, add to presenter
         monitor.pathUpdateHandler = { pathUpdateHandler in
             if pathUpdateHandler.status == .satisfied {
                 self.internetIsAvailble = true
-                DispatchQueue.main.async {
-                    self.tabBarController?.tabBar.isHidden = false
-                }
             } else {
                 self.internetIsAvailble = false
             }
@@ -92,7 +90,7 @@ class MainViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+       
         if internetIsAvailble ?? false {
             // loaddata
             self.moviesTableView.isHidden = true
@@ -123,9 +121,9 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource, MainVCPresenterProtocol, MainVCDelegateToCellProtocol, UISearchBarDelegate {
-   
+    
     // MainVCdelegateProtocol
-   
+    
     func presentDataOfMovieVC(movieName: String, moviePoster: UIImage, movieDate: String, movieRate: String, movieData: String) {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         guard let dataOfMovieVC = storyboard.instantiateViewController(identifier: "DataOfMovieViewController") as? DataOfMovieViewController else { return }
@@ -136,7 +134,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, MainVC
         DataViewControllerData.shared.dataOfMovieLabelTtext = movieData
         show(dataOfMovieVC, sender: nil)
     }
-   
+    
     //MainVCPresenterProtocol
     
     func loadVC() {
@@ -156,6 +154,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, MainVC
     func stopActivityIndicator() {
         self.loadingActivityIndicator.stopAnimating()
     }
+    
+    // TableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let count = MainViewControllerData.shared.filteredMovies.count

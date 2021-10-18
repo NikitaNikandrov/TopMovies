@@ -28,8 +28,6 @@ class SettingsOfListViewController: UIViewController {
         let sortRow = sortPicker.selectedRow(inComponent: 0)
         SettingsOfListData.shared.ChoosedSortRow = sortRow
         
-        mainVCdelegate?.loadVC()
-        
         self.navigationController?.popToRootViewController(animated: true)
     }
     
