@@ -6,10 +6,21 @@
 //
 
 import UIKit
+import Network
 
 class MainViewController: UIViewController {
     
+    // variables
+    
     private var presenter: MainViewControllerPresenter!
+    private var internetIsAvailble: Bool?
+    
+    // const
+    
+    let monitor = NWPathMonitor()
+    let queue = DispatchQueue(label: "InternetConnectionMonitor")
+    
+    // outlets
     
     @IBOutlet weak var moviesTableView: UITableView!
     @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView!
@@ -17,6 +28,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var settingsOfListButton: UIBarButtonItem!
     
     @IBOutlet weak var movieSearchBar: UISearchBar!
+    
+    // actions
     
     @IBAction func infoButtonIsPressed(_ sender: Any) {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
@@ -30,36 +43,71 @@ class MainViewController: UIViewController {
         show(settingOfListVC, sender: nil)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        self.tabBarController?.tabBar.isHidden = false
-    }
+    //life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter = MainViewControllerPresenter()
-        presenter.delegate = self
+        // delegate & presenter
+        self.presenter = MainViewControllerPresenter()
+        self.presenter.delegate = self
         
-        self.moviesTableView.isHidden = true
-        loadVC()
-        self.moviesTableView.isHidden = false
-        self.moviesTableView.tableHeaderView = movieSearchBar
-        self.moviesTableView.keyboardDismissMode = .onDrag
-        
+        // table view
         self.moviesTableView.delegate = self
         self.moviesTableView.dataSource = self
         self.moviesTableView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "MovieTableViewCell")
-       
-        setTitleVC()
         
+        self.moviesTableView.tableHeaderView = self.movieSearchBar
+        self.moviesTableView.keyboardDismissMode = .onDrag
+        
+        // searchbar
         self.movieSearchBar.delegate = self
+        
+        // set items on vc
+        setTitleVC()
         
         self.infoButton.title = "Info"
         self.settingsOfListButton.title = "Settings"
         
         self.tabBarController?.tabBar.items?[1].title = "Favourit movies"
+        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        // checkinig an internet access
+        monitor.pathUpdateHandler = { pathUpdateHandler in
+            if pathUpdateHandler.status == .satisfied {
+                self.internetIsAvailble = true
+                DispatchQueue.main.async {
+                    self.tabBarController?.tabBar.isHidden = false
+                }
+            } else {
+                self.internetIsAvailble = false
+            }
+        }
+        monitor.start(queue: queue)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if internetIsAvailble ?? false {
+            // loaddata
+            self.moviesTableView.isHidden = true
+            loadVC()
+            self.moviesTableView.isHidden = false
+        } else {
+            self.moviesTableView.isHidden = true
+            stopActivityIndicator()
+            let alert = UIAlertController(title: "There's no internet connection.", message: "Please, check your internet access", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        }
+    }
+    
+    // functions
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         presenter.filteringMovies(searchText: searchText)
@@ -75,7 +123,9 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource, MainVCPresenterProtocol, MainVCDelegateToCellProtocol, UISearchBarDelegate {
+   
     // MainVCdelegateProtocol
+   
     func presentDataOfMovieVC(movieName: String, moviePoster: UIImage, movieDate: String, movieRate: String, movieData: String) {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         guard let dataOfMovieVC = storyboard.instantiateViewController(identifier: "DataOfMovieViewController") as? DataOfMovieViewController else { return }
@@ -86,7 +136,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, MainVC
         DataViewControllerData.shared.dataOfMovieLabelTtext = movieData
         show(dataOfMovieVC, sender: nil)
     }
+   
     //MainVCPresenterProtocol
+    
     func loadVC() {
         presenter.loadListOfMovies()
     }
