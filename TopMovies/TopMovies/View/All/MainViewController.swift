@@ -176,6 +176,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, MainVC
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as? MovieTableViewCell
+        self.presentDataOfMovieVC(movieName: cell!.titleOfMovieLabel.text!, moviePoster: cell!.posterOfMovie.image!, movieDate: cell!.dateOfMovieLabel.text!, movieRate: cell!.ratingLabel.text!, movieData: cell!.dataOfMovieLabel.text!)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
