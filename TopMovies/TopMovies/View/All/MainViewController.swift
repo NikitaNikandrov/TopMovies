@@ -76,6 +76,7 @@ class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        self.tabBarController?.tabBar.isHidden = false
         // checkinig an internet access
         // create func, add to presenter
         monitor.pathUpdateHandler = { pathUpdateHandler in
