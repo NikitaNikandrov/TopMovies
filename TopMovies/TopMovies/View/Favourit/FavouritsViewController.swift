@@ -35,12 +35,12 @@ class FavouritsViewController: UIViewController {
 extension FavouritsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return FavouritViewControllerData.shared.favouritMovies?.count ?? 0
+        return FavouritViewControllerData.shared.favouriteMovies?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: cellReuseID)
-        let movie = FavouritViewControllerData.shared.favouritMovies?[indexPath.row]
+        let movie = FavouritViewControllerData.shared.favouriteMovies?[indexPath.row]
         cell.textLabel?.text = "\(indexPath.row + 1)" + ". \(movie ?? "")"
         return cell
     }
@@ -51,7 +51,7 @@ extension FavouritsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            FavouritViewControllerData.shared.favouritMovies?.remove(at: indexPath.row)
+            FavouritViewControllerData.shared.favouriteMovies?.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
         defaultsService.clearDefaults()

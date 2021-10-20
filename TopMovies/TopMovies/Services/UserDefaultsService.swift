@@ -10,12 +10,12 @@ import Foundation
 class UserDefaultsService {
     
     func loadDataFromDefaults() {
-        if FavouritViewControllerData.shared.favouritMovies?.count == 0 {
+        if FavouritViewControllerData.shared.favouriteMovies?.count == 0 {
             let defaults = UserDefaults.standard
             let data = defaults.array(forKey: "favourits")
             if data != nil {
                 for movie in data! {
-                    FavouritViewControllerData.shared.favouritMovies?.append(movie as! String)
+                    FavouritViewControllerData.shared.favouriteMovies?.append(movie as! String)
                 }
             } else { return }
         } else { return }
@@ -23,7 +23,7 @@ class UserDefaultsService {
     
     func saveDataToDefaults() {
         var data: [String] = []
-        for movie in FavouritViewControllerData.shared.favouritMovies! {
+        for movie in FavouritViewControllerData.shared.favouriteMovies! {
             data.append(movie)
         }
         let defaults = UserDefaults.standard

@@ -10,7 +10,7 @@ import Foundation
 final class FavouritViewControllerData {
     static var shared = FavouritViewControllerData()
     private init() {
-        favouritMovies = []
+        favouriteMovies = []
     }
-    var favouritMovies: [String]?
+    var favouriteMovies: [String]?
 }

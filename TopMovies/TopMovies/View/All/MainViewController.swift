@@ -69,7 +69,7 @@ class MainViewController: UIViewController {
         self.infoButton.title = "Info"
         self.settingsOfListButton.title = "Settings"
         
-        self.tabBarController?.tabBar.items?[1].title = "Favourit movies"
+        self.tabBarController?.tabBar.items?[1].title = "Favourite movies"
         
     }
     
@@ -78,7 +78,6 @@ class MainViewController: UIViewController {
         
         self.tabBarController?.tabBar.isHidden = false
         // checkinig an internet access
-        // create func, add to presenter
         monitor.pathUpdateHandler = { pathUpdateHandler in
             if pathUpdateHandler.status == .satisfied {
                 self.internetIsAvailble = true
@@ -99,7 +98,7 @@ class MainViewController: UIViewController {
             self.moviesTableView.isHidden = false
         } else {
             self.moviesTableView.isHidden = true
-            stopActivityIndicator()
+            //stopActivityIndicator()
             let alert = UIAlertController(title: "There's no internet connection.", message: "Please, check your internet access", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             self.present(alert, animated: true)

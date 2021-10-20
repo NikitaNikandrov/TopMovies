@@ -13,7 +13,7 @@ final class SettingsOfListData {
         choosedYear = nil
         choosedYearRow = -1
         ChoosedSortRow = 0
-        sortPickerOptions = ["Popularity high to low", "Popularity low to high" ,"Newer firstly", "Older firstly"]
+        sortPickerOptions = ["Popularity high to low", "Popularity low to high" ,"New first", "Old first"]
         yearPickerOptions = []
     }
     

@@ -76,13 +76,13 @@ class DataOfMovieViewController: UIViewController {
     }
     
     func setAddButton() {
-        if movieIsFavourit() {
-            self.addButton.setTitle("Remove from favourit", for: .normal)
+        if movieIsFavourite() {
+            self.addButton.setTitle("Remove from favourite", for: .normal)
             self.addButton.setTitleColor(.white, for: .normal)
             self.addButton.backgroundColor = .systemRed
             self.addButton.layer.cornerRadius = 5
         } else {
-            self.addButton.setTitle("Add to favourit", for: .normal)
+            self.addButton.setTitle("Add to favourite", for: .normal)
             self.addButton.setTitleColor(.white, for: .normal)
             self.addButton.backgroundColor = .systemGreen
             self.addButton.layer.cornerRadius = 5
@@ -100,9 +100,9 @@ class DataOfMovieViewController: UIViewController {
 
 extension DataOfMovieViewController: DataOfMovieVCPresenterProtocol {
     
-    func movieIsFavourit() -> Bool {
+    func movieIsFavourite() -> Bool {
         var answer = false
-        for movie in FavouritViewControllerData.shared.favouritMovies ?? [] {
+        for movie in FavouritViewControllerData.shared.favouriteMovies ?? [] {
             if movie == self.title {
                 answer = true
                 break

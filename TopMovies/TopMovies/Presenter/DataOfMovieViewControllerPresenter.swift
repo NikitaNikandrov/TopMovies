@@ -8,7 +8,7 @@
 import Foundation
 
 protocol DataOfMovieVCPresenterProtocol: AnyObject {
-    func movieIsFavourit() -> Bool
+    func movieIsFavourite() -> Bool
 }
 
 class DataOfMovieVCPresenter {
@@ -17,13 +17,13 @@ class DataOfMovieVCPresenter {
     weak var delegate: DataOfMovieVCPresenterProtocol?
     
     func addButtonIsPressed(title: String){
-        if delegate?.movieIsFavourit() == true {
-            let index = FavouritViewControllerData.shared.favouritMovies?.firstIndex(of: title)
-            FavouritViewControllerData.shared.favouritMovies?.remove(at: index!)
+        if delegate?.movieIsFavourite() == true {
+            let index = FavouritViewControllerData.shared.favouriteMovies?.firstIndex(of: title)
+            FavouritViewControllerData.shared.favouriteMovies?.remove(at: index!)
             defaultsService.clearDefaults()
             defaultsService.saveDataToDefaults()
         } else {
-            FavouritViewControllerData.shared.favouritMovies?.append(title)
+            FavouritViewControllerData.shared.favouriteMovies?.append(title)
             defaultsService.clearDefaults()
             defaultsService.saveDataToDefaults()
         }
