@@ -12,7 +12,6 @@ protocol DataOfMovieVCPresenterProtocol: AnyObject {
 }
 
 class DataOfMovieVCPresenter {
-    
     private let defaultsService = UserDefaultsService()
     weak var delegate: DataOfMovieVCPresenterProtocol?
     

@@ -29,6 +29,8 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var movieSearchBar: UISearchBar!
     
+    @IBOutlet weak var noInternetImage: UIImageView!
+    
     //Mark: actions
     
     @IBAction func infoButtonIsPressed(_ sender: Any) {
@@ -75,6 +77,9 @@ class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.tabBarController?.tabBar.isHidden = false
+        self.moviesTableView.isHidden = true
+        self.movieSearchBar.isHidden = true
+        self.noInternetImage.isHidden = true
         // checkinig an internet access
         monitor.pathUpdateHandler = { pathUpdateHandler in
             if pathUpdateHandler.status == .satisfied {
@@ -90,15 +95,14 @@ class MainViewController: UIViewController {
         super.viewDidAppear(animated)
         if internetIsAvailble ?? false {
             // loaddata
-            self.moviesTableView.isHidden = true
             loadVC()
             self.moviesTableView.isHidden = false
+            self.movieSearchBar.isHidden = false
         } else {
-            self.moviesTableView.isHidden = true
-            //stopActivityIndicator()
             let alert = UIAlertController(title: "There's no internet connection.", message: "Please, check your internet access", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             self.present(alert, animated: true)
+            self.noInternetImage.isHidden = false
         }
     }
     
