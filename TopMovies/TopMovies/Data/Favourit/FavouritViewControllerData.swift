@@ -12,5 +12,6 @@ final class FavouritViewControllerData {
     private init() {
         favouriteMovies = []
     }
+    
     var favouriteMovies: [String]?
 }

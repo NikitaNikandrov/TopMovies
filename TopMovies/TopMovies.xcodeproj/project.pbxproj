@@ -32,6 +32,7 @@
 		E531248D261884D000268361 /* MainViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531248C261884D000268361 /* MainViewControllerPresenter.swift */; };
 		E5312497261A4CC800268361 /* UserNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5312496261A4CC800268361 /* UserNotifications.swift */; };
 		E53124A6261B967B00268361 /* CalendarViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53124A5261B967B00268361 /* CalendarViewControllerPresenter.swift */; };
+		E53A74992724029800442D08 /* NSCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53A74982724029700442D08 /* NSCache.swift */; };
 		E5A5ED9726641BDD002FCFC3 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A5ED9626641BDD002FCFC3 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		E531248C261884D000268361 /* MainViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerPresenter.swift; sourceTree = "<group>"; };
 		E5312496261A4CC800268361 /* UserNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotifications.swift; sourceTree = "<group>"; };
 		E53124A5261B967B00268361 /* CalendarViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewControllerPresenter.swift; sourceTree = "<group>"; };
+		E53A74982724029700442D08 /* NSCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCache.swift; sourceTree = "<group>"; };
 		E5A5ED9626641BDD002FCFC3 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				E531248526151BA600268361 /* NetworkService.swift */,
+				E53A74982724029700442D08 /* NSCache.swift */,
 				E5312496261A4CC800268361 /* UserNotifications.swift */,
 				E50D080E2707BF3B0066C700 /* UserDefaultsService.swift */,
 			);
@@ -293,6 +296,7 @@
 				E531247D2614CF7000268361 /* Data.swift in Sources */,
 				E531245B26138C6500268361 /* MainViewController.swift in Sources */,
 				E52B4A8626810AF1007B0328 /* FavouritsViewController.swift in Sources */,
+				E53A74992724029800442D08 /* NSCache.swift in Sources */,
 				E531245726138C6500268361 /* AppDelegate.swift in Sources */,
 				E531247426138F2E00268361 /* MovieTableViewCell.swift in Sources */,
 				E52B4A8C2688FD55007B0328 /* DataOfMovieViewController.swift in Sources */,

@@ -12,6 +12,7 @@ final class CalendarViewControllerData {
     private init() {
         movieNameForNotification = nil
     }
+    
     var movieNameForNotification: String?
     var dateOfNotification = DateComponents()
 }

@@ -20,7 +20,6 @@ protocol MainVCDelegateToCellProtocol: AnyObject {
 }
 
 class MainViewControllerPresenter {
-    
     private let networkService = NetworkService()
     weak var delegate: MainVCPresenterProtocol?
     

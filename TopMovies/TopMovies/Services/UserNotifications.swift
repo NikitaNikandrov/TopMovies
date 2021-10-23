@@ -10,11 +10,9 @@ import UserNotifications
 
 
 class UserNotifications: NSObject {
-    
     let notificationCenter = UNUserNotificationCenter.current()
     
     func notificationRequest() {
-        
         let options: UNAuthorizationOptions = [.alert, .sound, .badge]
         
         notificationCenter.requestAuthorization(options: options) { (didAllow, error) in

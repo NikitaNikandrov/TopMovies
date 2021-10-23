@@ -49,6 +49,27 @@ class MovieTableViewCell: UITableViewCell {
         self.viewMoreButton.layer.cornerRadius = 5
     }
     
+    func loadCellWithCache(movie: MovieData, cachedImage: UIImage) {
+        
+        self.posterOfMovie.image = cachedImage
+        
+        self.ratingLabel.text = String(format: "%g", movie.numberOfRating!*10) + "%"
+        setupRatingLabel(rating: Int((movie.numberOfRating!)*10))
+        
+        self.titleOfMovieLabel.text = movie.titleOfMovie
+        setupTitleLabel()
+        
+        self.dataOfMovieLabel.text = movie.overviewOfMovie
+        setupDataLabel()
+        
+        self.dateOfMovieLabel.text = movie.releaseDateOfMovie
+        
+        self.viewMoreButton.setTitle("View more", for: .normal)
+        self.viewMoreButton.setTitleColor(.white, for: .normal)
+        self.viewMoreButton.backgroundColor = .systemGray2
+        self.viewMoreButton.layer.cornerRadius = 5
+    }
+    
     func setupRatingLabel(rating: Int) {
         self.ratingLabel.textColor = .white
         self.ratingLabel.backgroundColor = .black
@@ -87,6 +108,7 @@ extension UIImageView {
             guard let result = result else { return }
             DispatchQueue.main.async {
                 self.image = result
+                PosterOfMoviesCache.shared.setObject(result, forKey: posterURL as NSString)
             }
         }
     }

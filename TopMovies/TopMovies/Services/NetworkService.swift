@@ -11,7 +11,6 @@ import UIKit
 class NetworkService {
     
     func loadDataOfMovies(closure: @escaping(([MovieData]?) -> Void)) {
-        
         var resultResponce: JSONMovies.JsonMoviesResponse?
         
         guard var urlComp = URLComponents(string: "https://api.themoviedb.org/3/discover/movie?") else {
@@ -82,7 +81,6 @@ class NetworkService {
     }
     
     func loadImageOfMovie(imageURL: String, closure: @escaping((UIImage?) -> Void)) {
-        
         var url = "https://image.tmdb.org/t/p/w500"
         url += imageURL
         guard let urlResponce = URL(string: url) else { return }
